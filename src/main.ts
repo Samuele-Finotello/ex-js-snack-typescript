@@ -1,3 +1,4 @@
+// SNACK 1 
 let APIDates: unknown | null;
 
 if (typeof APIDates === 'string') {
@@ -21,3 +22,12 @@ else if (APIDates instanceof Promise) {
 else {
   console.log('Tipo non supportato')
 }
+
+// SNACK 2
+type Dipendente = {
+  nome: string,
+  cognome: string,
+  annoNascita: number,
+  sesso: 'm' | 'f',
+  anniDiServizio: [number, ...number[]]
+};
