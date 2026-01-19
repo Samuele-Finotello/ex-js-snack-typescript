@@ -9,6 +9,15 @@ else if (typeof APIDates === 'number') {
 else if (typeof APIDates === 'boolean') {
   console.log(APIDates ? 'Si' : 'No')
 }
+else if (APIDates === null) {
+  console.log('Il dato è vuoto')
+}
+else if (Array.isArray(APIDates)) {
+  console.log(APIDates.length)
+}
+else if (APIDates instanceof Promise) {
+  APIDates.then(message => console.log(message))
+}
 else {
   console.log('Tipo non supportato')
 }
