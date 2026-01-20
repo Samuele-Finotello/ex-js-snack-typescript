@@ -35,14 +35,21 @@ type Dipendente = {
 };
 
 // SNACK 3
-let Developer: Dipendente & {
+type Developer = Dipendente & {
   livelloEsperienza: 'Junior' | 'Mid' | 'Senior',
   linguaggi?: string[],
   certificazioni: string[]
 }
 
-let ProjectManager: Dipendente & {
+type ProjectManager = Dipendente & {
   teamSize: number | null,
   budgetGestito?: number,
   stakeholderPrincipali: string[]
+}
+
+type Team = {
+  nome: string,
+  progettoAnnuale: string | null,
+  budget: number,
+  membri: [ProjectManager, Developer, ...Developer[]]
 }
